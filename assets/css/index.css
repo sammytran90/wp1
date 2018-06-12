@@ -1,0 +1,72 @@
+@import "./fonts.css";
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    margin: 0px;
+}
+#app{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+ul li{
+    list-style: none;
+}
+
+.controller{
+    display: flex;
+    flex-direction: column;
+}
+.controller .controller__item{
+    flex: 0 0 auto;
+    display: inline-block;
+    color: rgba(16,52,153,0.7);
+    position: relative;
+    cursor: pointer;
+}
+.controller .controller__item.active{
+    color: rgba(240,195,15,.7);
+}
+.controller .controller__item:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    left: 0;
+    bottom: -5px;
+    background: rgba(240,195,15,.7);
+}
+.controller .controller__item.active:after{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* test */
+.sample{
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.sample img{
+    object-fit: fill;
+}

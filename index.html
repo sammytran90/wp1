@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+    <div id="app">
+        <!-- layer-1 -->
+        <div class="layer1">
+            <ul class="controller">
+                <li class="controller__item" @click="slide=1" :class="slide == 1 ? 'active' : ''">
+                    <span>{{content.tittle}}</span>
+                    </li>
+                <li class="controller__item" @click="slide=2" :class="slide == 2 ? 'active' : ''">
+                    <span>Situation</span>
+                </li>
+                <li class="controller__item" @click="slide=3" :class="slide == 3 ? 'active' : ''">
+                    <span>Challenges</span>
+                </li>
+                <li class="controller__item" @click="slide=4" :class="slide == 4 ? 'active' : ''">
+                    <span>Next steps</span>
+                </li>
+            </ul>
+        </div>
+        <div class="sample">
+            <img src="./assets/image/sample.png" class="sample" alt="sample">
+        </div>
+    </div>
+
+    <script src="./libs/vuejs/vue.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
