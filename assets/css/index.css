@@ -4,14 +4,17 @@ html,body{
     width: 100%;
     height: 100%;
 }
-body{
+body, ul ,h1,h2,h3,h4,h5,h6,p{
     margin: 0px;
+}
+body, ul ,h1,h2,h3,h4,h5,h6,p{
+    padding: 0px;
 }
 #app{
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 ul li{
@@ -19,45 +22,142 @@ ul li{
     display: inline;
 }
 
-.controller{
+h1,h4{
+    font-family: 'RobotoMono-Bold';
 }
-.controller .controller__item{
-    font-family: 'RobotoMono-Medium';
-    display: table;
-    color: rgb(16,52,153);
-    position: relative;
-    cursor: pointer;
-    font-size: 3rem;
-    mix-blend-mode: color-burn;
+h2{
+    font-family: 'RobotoMono-Regular';
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 4.5rem;
+}
+h4{
+    font-size: 2rem;
 }
 
-.controller .controller__item.active{
-    color: rgb(240, 195, 15);
-    mix-blend-mode: darken;
+.layer{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
 }
-.controller .controller__item:after{
+
+/* layer1 */
+.layer1{
+    font-family: 'RobotoMono-Medium';
+}
+.layer1 > *{
+    position: absolute;
+}
+.layer1__insight{
+    color: rgb(210,100,20);
+    font-size: 1.3rem;
+    padding: 1%;
+}
+.layer1__small-tittle,
+.layer1__tittle,
+.layer1__topic,
+.controller__item
+{
+    color: rgb(16,52,153);
+}
+.layer1__small-tittle{
+    top: 76px;
+    left: 206px;
+    width: 100px;
+    line-height: 1;
+}
+.layer1__tittle{
+    top: 10px;
+    left: 10px;
+}
+.layer1__topic{
+    top: 682px;
+    left: 856px;
+}
+.layer1__controller{
+    bottom: 6%;
+    left: 2%;
+}
+
+.controller__item{
+    display: table;
+    position: relative;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+.controller__item:after,
+.layer1__date:after{
     content: '';
     display: inline-block;
     position: absolute;
     width: 100%;
-    height: 15px;
+    height: 20px;
     left: 0;
-    bottom: 10px;
+    bottom: 2px;
     background: rgb(240,195,15);
-    background-blend-mode: darken;
+    background-blend-mode: color;
     z-index: -1;
 }
-.controller .controller__item.active:after{
+.controller__item.active{
+    color: rgb(240, 195, 15);
+    mix-blend-mode: darken;
+}
+.controller__item.active:after{
     display: none;
 }
+.layer1__date{
+    transform: rotate(-90deg) translate(100%,0);
+    transform-origin: right bottom;
+    bottom: 0;
+    right: 0;
+    font-size: 53px;
+    color: rgb(210,100,20);
+    mix-blend-mode: darken;
+}
 
+/* background */
+.layer__background{
+    background: url('../image/bg/bg1.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+.layer__background_decoration{
+    margin-left: 29.4vw;
+    margin-top: 13.33vh;
+    width: 37vw;
+    height: 65vh;
+    border: 2vw solid rgba(240,195,15,0.5);
+    mix-blend-mode: multiply;
+    background: transparent;
+}
+.image-wrapper{
+    position: absolute;
+    width: 52vw;
+    height: 52vh;
+    background: rgba(240,195,15,.05);
+    background-blend-mode: multiply;
+    display: block;
+    left: 24vw;
+    top: 26vh;
+}
+.decoration{
+    position: absolute;
+}
+.decoration_1{
 
-
-
-
-
-
-
+}
+.blending_color-burn{
+    mix-blend-mode: color-burn;
+}
 
 
 
@@ -65,12 +165,13 @@ ul li{
 
 /* test */
 .sample{
-    z-index: -1;
+    z-index: 2;
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    opacity: .5;
 }
 .sample img{
     object-fit: fill;

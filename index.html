@@ -11,17 +11,54 @@
 
 <body>
     <div id="app">
-        <!-- layer-1 -->
-        <div class="layer1">
-            <ul class="controller">
-                <li class="controller__item" @click="slide=1" :class="slide == 1 ? 'active' : ''">{{content.tittle}}</li>
-                <li class="controller__item" @click="slide=2" :class="slide == 2 ? 'active' : ''">Situation</li>
-                <li class="controller__item" @click="slide=3" :class="slide == 3 ? 'active' : ''">Challenges</li>
-                <li class="controller__item" @click="slide=4" :class="slide == 4 ? 'active' : ''">Next steps</li>
+        <div class="layer layer1">
+            <!-- slogan -->
+            <div class="layer1__insight">
+                <p>Wunderpeople Insights</p>
+            </div>
+            <!-- topic -->
+            <div class="layer1__small-tittle">
+                <h4 class="blending_color-burn">{{content.smalltittle}}</h4>
+            </div>
+            <div class="layer1__tittle">
+                <h1 class="blending_color-burn">{{content.tittle}}</h1>
+            </div>
+            <div class="layer1__topic">
+                <h2 class="blending_color-burn">{{content.topic}}</h2>
+            </div>
+            <ul class="layer1__controller">
+                <li class="controller__item active blending_color-burn" @click="slide=1" :class="slide == 1 ? 'active' : ''">Meetup #2</li>
+                <li class="controller__item blending_color-burn" @click="slide=1" :class="slide == 2 ? 'active' : ''">Situation</li>
+                <li class="controller__item blending_color-burn" @click="slide=1" :class="slide == 3 ? 'active' : ''">Challenges</li>
+                <li class="controller__item blending_color-burn" @click="slide=1" :class="slide == 4 ? 'active' : ''">Next steps</li>
             </ul>
+            <div class="layer1__date">13 Jun 2018, The Hague</div>
+        </div>
+        <div class="layer layer__background">
+            <div class="layer__background_decoration"></div>
+            <div class="image-wrapper">
+                <img src="" alt="image here">
+            </div>
+            <div class="decoration decoration_1" style="
+        transform: matrix(.85,0,0,.85,1634,-106);
+    ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="144" version="1.1">
+                    <g transform="matrix(1,0,0,1,0,0)">
+                        <path d="M13 2L 78.9 73.3L 11.8 140.4L 1.1 129.8L 58 72.9L 1.9 12.2Z" fill="rgb(16,52,153)" style="mix-blend-mode: color-burn;"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="decoration decoration_2" style="transform: matrix(0.7, 0, 0, 0.7, -52, -314);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" version="1.1">
+                    <g transform="matrix(1,0,0,1,1,0)">
+                        <path d="M87.1,0c48,0,87.1,39.1,87.1,87.1s-39.1,87.1-87.1,87.1S0,135.1,0,87.1S39.1,0,87.1,0z M87.1,155.7 c37.8,0,68.6-30.8,68.6-68.6s-30.8-68.6-68.6-68.6S18.5,49.3,18.5,87.1S49.3,155.7,87.1,155.7z"
+                            fill="rgb(16,52,153)" style="mix-blend-mode: color-burn;"></path>
+                    </g>
+                </svg>
+            </div>
         </div>
         <div class="sample">
-            <img src="./assets/image/sample.png" class="sample" alt="sample">
+            <img src="./assets/image/sample.png" alt="sample" class="sample">
         </div>
     </div>
 
