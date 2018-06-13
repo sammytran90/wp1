@@ -18,13 +18,13 @@
             </div>
             <!-- topic -->
             <div class="layer1__small-tittle">
-                <h4 class="blending_color-burn">{{content.smalltittle}}</h4>
+                <h4 class="blending_color-burn">{{contents.smalltittle}}</h4>
             </div>
             <div class="layer1__tittle">
-                <h1 class="blending_color-burn">{{content.tittle}}</h1>
+                <h1 class="blending_color-burn">{{contents.tittle}}</h1>
             </div>
             <div class="layer1__topic">
-                <h2 class="blending_color-burn">{{content.topic}}</h2>
+                <h2 class="blending_color-burn">{{contents.topic}}</h2>
             </div>
             <ul class="layer1__controller">
                 <li class="controller__item active blending_color-burn" @click="slide=1" :class="slide == 1 ? 'active' : ''">Meetup #2</li>
@@ -34,14 +34,22 @@
             </ul>
             <div class="layer1__date">13 Jun 2018, The Hague</div>
         </div>
+
+        <!-- content -->
+        <div class="layer layer__content">
+            <div class="content content_slide-1">
+                <div>
+                    <h4>Participants</h4>
+                </div>
+            </div>
+        </div>
+        <!-- background -->
         <div class="layer layer__background">
             <div class="layer__background_decoration"></div>
             <div class="image-wrapper">
                 <img src="" alt="image here">
             </div>
-            <div class="decoration decoration_1" style="
-        transform: matrix(.85,0,0,.85,1634,-106);
-    ">
+            <div class="decoration decoration_1" style="transform: matrix(.85,0,0,.85,1634,-106)">
                 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="144" version="1.1">
                     <g transform="matrix(1,0,0,1,0,0)">
                         <path d="M13 2L 78.9 73.3L 11.8 140.4L 1.1 129.8L 58 72.9L 1.9 12.2Z" fill="rgb(16,52,153)" style="mix-blend-mode: color-burn;"></path>
@@ -57,6 +65,7 @@
                 </svg>
             </div>
         </div>
+
         <div class="sample">
             <img src="./assets/image/sample.png" alt="sample" class="sample">
         </div>

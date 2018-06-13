@@ -3,10 +3,45 @@ var app = new Vue({
     data: {
         slide: 1,
         date: null,
-        content: {
+        contents: {
             smalltittle: 'Legal Design Thinking',
             tittle: 'Meetup #2',
             topic: 'BURENRECHTER',
+            slides: [
+                [
+                    {
+                        tittle: 'Participants',
+                        content: [
+                            'Lawyer,',
+                            'university researcher,',
+                            'angel investor,',
+                            'tutor in ethics,',
+                            'designer,',
+                            'innovator,',
+                            'social entrepreneur'
+                        ]
+                    },
+                    {
+                        content: [
+                            'Noise, dirt,',
+                            'property borders,',
+                            'trees',
+                            'relationships,',
+                            'construction,',
+                            'different use of property'
+                        ]
+                    },
+                    {
+                        tittle: 'Why burenrechter',
+                        content:[
+                            'Law processes',
+                            'fail to achieve',
+                            'win-win solutions'
+                        ]
+                    }
+                ]
+            ]
+
         }
     },
     methods: {
@@ -16,7 +51,7 @@ var app = new Vue({
             return today.getDate() + ' ' + months[today.getMonth()] + ' ' + today.getFullYear();
         }
     },
-    created(){
+    created() {
         this.date = this.returnToday();
     }
 })
