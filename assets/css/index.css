@@ -1,5 +1,7 @@
 @import "./fonts.css";
-
+html{
+    font-size: 1vmin;
+}
 html,body{
     width: 100%;
     height: 100%;
@@ -29,13 +31,13 @@ h2{
     font-family: 'RobotoMono-Regular';
 }
 h1{
-    font-size: 5rem;
+    font-size: 12rem;
 }
 h2{
-    font-size: 4.5rem;
+    font-size: 7.5rem;
 }
 h4{
-    font-size: 2rem;
+    font-size: 3.5rem;
 }
 
 .layer{
@@ -57,8 +59,8 @@ h4{
 }
 .layer1__insight{
     color: rgb(210,100,20);
-    font-size: 1.3rem;
-    padding: 1%;
+    font-size: 2rem;
+    padding: 2.2vmin 4vmin;
 }
 .layer1__small-tittle,
 .layer1__tittle,
@@ -68,29 +70,32 @@ h4{
     color: rgb(16,52,153);
 }
 .layer1__small-tittle{
-    top: 76px;
-    left: 206px;
-    width: 100px;
+    top: 13vmin;
+    left: 20vmin;
+    width: 20vmin;
     line-height: 1;
 }
 .layer1__tittle{
-    top: 10px;
-    left: 10px;
+    top: 12vmin;
+    left: 46vmin;
+    line-height: 1;
+    letter-spacing: .3rem;
 }
 .layer1__topic{
-    top: 682px;
-    left: 856px;
+    top: 78vmin;
+    left: 85vmin;
+    letter-spacing: .7rem;
 }
 .layer1__controller{
-    bottom: 6%;
-    left: 2%;
+    bottom: 6vmin;
+    left: 2vmin;
 }
 
 .controller__item{
     display: table;
     position: relative;
     cursor: pointer;
-    font-size: 2.5rem;
+    font-size: 4.3rem;
     font-weight: 500;
     line-height: 1.3;
 }
@@ -100,7 +105,7 @@ h4{
     display: inline-block;
     position: absolute;
     width: 100%;
-    height: 20px;
+    height: 2vmin;
     left: 0;
     bottom: 2px;
     background: rgb(240,195,15);
@@ -119,7 +124,7 @@ h4{
     transform-origin: right bottom;
     bottom: 0;
     right: 0;
-    font-size: 53px;
+    font-size: 5.5rem;
     color: rgb(210,100,20);
     mix-blend-mode: darken;
 }
@@ -135,28 +140,31 @@ h4{
     z-index: -1;
 }
 .layer__background_decoration{
-    margin-left: 29.4vw;
-    margin-top: 13.33vh;
-    width: 37vw;
-    height: 65vh;
+    margin-left: 57vmin;
+    margin-top: 13.33vmin;
+    width: 70vmin;
+    height: 65vmin;
     border: 2vw solid rgba(240,195,15,0.5);
     mix-blend-mode: multiply;
     background: transparent;
 }
 .image-wrapper{
     position: absolute;
-    width: 52vw;
-    height: 52vh;
-    background: rgba(240,195,15,.05);
+    width: 100vmin;
+    height: 52vmin;
+    background: rgba(240,195,15,.5);
     background-blend-mode: multiply;
     display: block;
-    left: 24vw;
-    top: 26vh;
+    left: 46vmin;
+    top: 25.5vmin;
 }
 .decoration{
     position: absolute;
 }
 .decoration_1{
+
+}
+.decoration_2{
 
 }
 .blending_color-burn{
