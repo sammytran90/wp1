@@ -38,10 +38,10 @@
         <div class="layer contents">
             <!-- slide-1 -->
             <div class="contents__slide-1" :class="[slide == 1 ? 'active' : '']">
-                <div v-for="(para,index2) in contents.slides[0]" :class="['contents__paragraph-' + index2]">
+                <div v-for="(para,index2) in contents.slides[0]" :class="['slide-1_pa-' + index2]">
                     <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
                     <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
-                    <div v-for="(phase,index3) in para.content" :class="['contents__phase-' + index3]">
+                    <div v-for="(phase,index3) in para.content" :class="['slide-1_pa-' + index2 + '_p-' + index3]">
                         <p v-for="words in phase">{{words}}</p>
                     </div>
                 </div>
@@ -49,10 +49,10 @@
 
             <!-- slide-2 -->
             <div class="contents__slide-2" :class="[slide == 2 ? 'active' : '']">
-                <div v-for="(para,index2) in contents.slides[1]" :class="['contents__paragraph-' + index2]">
+                <div v-for="(para,index2) in contents.slides[1]" :class="['slide-2_pa-' + index2]">
                     <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
                     <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
-                    <div v-for="(phase,index3) in para.content" :class="['contents__phase-' + index3]">
+                    <div v-for="(phase,index3) in para.content" :class="['slide-2_pa-' + index2 + '_p-' + index3]">
                         <p v-for="words in phase">{{words}}</p>
                     </div>
                 </div>
@@ -60,10 +60,10 @@
 
             <!-- slide-3 -->
             <div class="contents__slide-3" :class="[slide == 3 ? 'active' : '']">
-                <div v-for="(para,index2) in contents.slides[2]" :class="['contents__paragraph-' + index2]">
+                <div v-for="(para,index2) in contents.slides[2]" :class="['slide-3_pa-' + index2]">
                     <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
                     <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
-                    <div v-for="(phase,index3) in para.content" :class="['contents__phase-' + index3]">
+                    <div v-for="(phase,index3) in para.content" :class="['slide-3_pa-' + index2 + '_p-' + index3]">
                         <p v-for="words in phase">{{words}}</p>
                     </div>
                 </div>
@@ -71,10 +71,10 @@
 
             <!-- slide-4 -->
             <div class="contents__slide-4" :class="[slide == 4 ? 'active' : '']">
-                <div v-for="(para,index2) in contents.slides[3]" :class="['contents__paragraph-' + index2]">
+                <div v-for="(para,index2) in contents.slides[3]" :class="['slide-4_pa-' + index2]">
                     <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
                     <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
-                    <div v-for="(phase,index3) in para.content" :class="['contents__phase-' + index3]">
+                    <div v-for="(phase,index3) in para.content" :class="['slide-4_pa-' + index2 + '_p-' + index3]">
                         <p v-for="words in phase">{{words}}</p>
                     </div>
                 </div>
@@ -105,8 +105,8 @@
             </div>
         </div>
 
-        <div class="sample" style="display: block">
-            <img src="./assets/image/sample.png" alt="sample" class="sample">
+        <div class="sample" style="display: none">
+            <img src="./assets/image/test/slide2.png" alt="sample" class="sample">
         </div>
     </div>
 

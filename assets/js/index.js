@@ -68,9 +68,7 @@ var app = new Vue({
                     {
                         tittle4: [
                             'Current situation'
-                        ]
-                    },
-                    {
+                        ],
                         content: [
                             [
                                 'Burenrechter has yet',
@@ -84,7 +82,6 @@ var app = new Vue({
                             ]
                         ]
                     },
-
                     {
                         tittle4: [
                             'Opportunities'
