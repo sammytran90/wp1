@@ -11,63 +11,101 @@
 
 <body>
     <div id="app">
-        <div class="layer layer1">
+
+        <!-- main-tittles -->
+        <div class="layer tittles">
             <!-- slogan -->
-            <div class="layer1__insight">
+            <div class="tittles__insight">
                 <p>Wunderpeople Insights</p>
             </div>
             <!-- topic -->
-            <div class="layer1__small-tittle">
+            <div class="tittles__small-tittle">
                 <h4 class="blending_color-burn">{{contents.smalltittle}}</h4>
             </div>
-            <div class="layer1__tittle">
-                <h1 class="blending_color-burn">{{contents.tittle}}</h1>
+            <div class="tittles__tittle-wrapper">
+                <div class="tittles__decoration"></div>
+                <div class="tittles__tittle">
+                    <h1 class="blending_color-burn">{{contents.tittle}}</h1>
+                </div>
+                <div class="tittles__topic">
+                    <h2 class="blending_color-burn">{{contents.topic}}</h2>
+                </div>
             </div>
-            <div class="layer1__topic">
-                <h2 class="blending_color-burn">{{contents.topic}}</h2>
-            </div>
-            <ul class="layer1__controller">
-                <li class="controller__item active blending_color-burn" @click="slide=1" :class="slide == 1 ? 'active' : ''">Meetup #2</li>
-                <li class="controller__item blending_color-burn" @click="slide=1" :class="slide == 2 ? 'active' : ''">Situation</li>
-                <li class="controller__item blending_color-burn" @click="slide=1" :class="slide == 3 ? 'active' : ''">Challenges</li>
-                <li class="controller__item blending_color-burn" @click="slide=1" :class="slide == 4 ? 'active' : ''">Next steps</li>
-            </ul>
-            <div class="layer1__date">13 Jun 2018, The Hague</div>
+            <div class="tittles__date">13 Jun 2018, The Hague</div>
         </div>
 
         <!-- content -->
-        <div class="layer layer__content">
-            <div class="content content_slide-1">
-                <div>
-                    <h4>Participants</h4>
+        <div class="layer contents">
+            <!-- slide-1 -->
+            <div class="contents__slide-1" :class="[slide == 1 ? 'active' : '']">
+                <div v-for="(para,index2) in contents.slides[0]" :class="['contents__paragraph-' + index2]">
+                    <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
+                    <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
+                    <div v-for="(phase,index3) in para.content" :class="['contents__phase-' + index3]">
+                        <p v-for="words in phase">{{words}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- slide-2 -->
+            <div class="contents__slide-2" :class="[slide == 2 ? 'active' : '']">
+                <div v-for="(para,index2) in contents.slides[1]" :class="['contents__paragraph-' + index2]">
+                    <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
+                    <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
+                    <div v-for="(phase,index3) in para.content" :class="['contents__phase-' + index3]">
+                        <p v-for="words in phase">{{words}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- slide-3 -->
+            <div class="contents__slide-3" :class="[slide == 3 ? 'active' : '']">
+                <div v-for="(para,index2) in contents.slides[2]" :class="['contents__paragraph-' + index2]">
+                    <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
+                    <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
+                    <div v-for="(phase,index3) in para.content" :class="['contents__phase-' + index3]">
+                        <p v-for="words in phase">{{words}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- slide-4 -->
+            <div class="contents__slide-4" :class="[slide == 4 ? 'active' : '']">
+                <div v-for="(para,index2) in contents.slides[3]" :class="['contents__paragraph-' + index2]">
+                    <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
+                    <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
+                    <div v-for="(phase,index3) in para.content" :class="['contents__phase-' + index3]">
+                        <p v-for="words in phase">{{words}}</p>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- controller -->
+        <div class="layer controller">
+            <ul class="controller__list">
+                <li class="controller__item blending_color-burn" @click="slide=1" :class="slide == 1 ? 'active' : ''">Meetup #2</li>
+                <li class="controller__item blending_color-burn" @click="slide=2" :class="slide == 2 ? 'active' : ''">Situation</li>
+                <li class="controller__item blending_color-burn" @click="slide=3" :class="slide == 3 ? 'active' : ''">Challenges</li>
+                <li class="controller__item blending_color-burn" @click="slide=4" :class="slide == 4 ? 'active' : ''">Next steps</li>
+            </ul>
+        </div>
+
         <!-- background -->
         <div class="layer layer__background">
-            <div class="layer__background_decoration"></div>
             <div class="image-wrapper">
                 <img src="" alt="image here">
             </div>
-            <div class="decoration decoration_1" style="transform: matrix(.85,0,0,.85,1634,-106)">
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="144" version="1.1">
-                    <g transform="matrix(1,0,0,1,0,0)">
-                        <path d="M13 2L 78.9 73.3L 11.8 140.4L 1.1 129.8L 58 72.9L 1.9 12.2Z" fill="rgb(16,52,153)" style="mix-blend-mode: color-burn;"></path>
-                    </g>
-                </svg>
+
+            <div class="decoration decoration_1">
+                <span class="icon-deco1 blending_color-burn"></span>
             </div>
-            <div class="decoration decoration_2" style="transform: matrix(0.7, 0, 0, 0.7, -52, -314);">
-                <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" version="1.1">
-                    <g transform="matrix(1,0,0,1,1,0)">
-                        <path d="M87.1,0c48,0,87.1,39.1,87.1,87.1s-39.1,87.1-87.1,87.1S0,135.1,0,87.1S39.1,0,87.1,0z M87.1,155.7 c37.8,0,68.6-30.8,68.6-68.6s-30.8-68.6-68.6-68.6S18.5,49.3,18.5,87.1S49.3,155.7,87.1,155.7z"
-                            fill="rgb(16,52,153)" style="mix-blend-mode: color-burn;"></path>
-                    </g>
-                </svg>
+            <div class="decoration decoration_2">
+                <span class="icon-deco2 blending_color-burn"></span>
             </div>
-            <div>{{decorationScale}}</div>
         </div>
 
-        <div class="sample">
+        <div class="sample" style="display: block">
             <img src="./assets/image/sample.png" alt="sample" class="sample">
         </div>
     </div>
