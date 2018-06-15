@@ -1,8 +1,8 @@
 var app = new Vue({
     el: '#app',
     data: {
-        decorationScale: 1,
         slide: 1,
+        translateContent: 0,
         date: null,
         contents: {
             smalltittle: 'Legal Design Thinking',
@@ -143,8 +143,10 @@ var app = new Vue({
                             'Challenge #2'
                         ],
                         content: [
-                            'Burenrechter - how to get solutions in',
-                            'conflict situations?'
+                            [
+                                'Burenrechter - how to get solutions in',
+                                'conflict situations?'
+                            ]
                         ]
                     },
                     {
@@ -152,12 +154,14 @@ var app = new Vue({
                             'Solution #2'
                         ],
                         content: [
-                            '- Includes forgiveness',
-                            'and self-reliance',
-                            '- Allow changing minds ',
-                            'during the process. ',
-                            '- Be a communication ',
-                            'tool, not just a process.'
+                            [
+                                '- Includes forgiveness',
+                                'and self-reliance',
+                                '- Allow changing minds ',
+                                'during the process. ',
+                                '- Be a communication ',
+                                'tool, not just a process.'
+                            ]
                         ]
                     },
                     {
@@ -165,9 +169,11 @@ var app = new Vue({
                             'Challenge #3'
                         ],
                         content: [
-                            'Burenrechter - how to ',
-                            'improve accessibility ',
-                            'to legal process? '
+                            [
+                                'Burenrechter - how to ',
+                                'improve accessibility ',
+                                'to legal process? '
+                            ]
                         ]
                     },
                     {
@@ -175,13 +181,15 @@ var app = new Vue({
                             'Solution #3'
                         ],
                         content: [
-                            '- Be a go-to point for ',
-                            'questions and support.',
-                            '- Focus on',
-                            'de-escalating. ',
-                            '- Create empathy.',
-                            '- Get rewards on ',
-                            'social point system'
+                            [
+                                '- Be a go-to point for ',
+                                'questions and support.',
+                                '- Focus on',
+                                'de-escalating. ',
+                                '- Create empathy.',
+                                '- Get rewards on ',
+                                'social point system'
+                            ]
                         ]
                     }
                 ],
@@ -200,11 +208,6 @@ var app = new Vue({
                             [
                                 'Be forgiving',
                                 'during the process'
-                            ],
-                            [
-                                'Do no start',
-                                'within the',
-                                'legal system'
                             ],
                             [
                                 'Do no start',
@@ -252,9 +255,23 @@ var app = new Vue({
             var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
             var today = new Date();
             return today.getDate() + ' ' + months[today.getMonth()] + ' ' + today.getFullYear();
+        },
+        nextSlideDemo: function (value) {
+            var def = document.querySelector('body').clientWidth;
+            return (value - 1) * -1 * def;
+        },
+        testScroll: function () {
+            console.log('scroll');
         }
     },
     created() {
         this.date = this.returnToday();
+        window.addEventListener('scroll', this.testScroll);
+    },
+    mounted() {
+        
     }
+    // destroyed() {
+    //     window.removeEventListener('scroll', this.testScroll);
+    // }
 })

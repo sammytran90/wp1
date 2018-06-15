@@ -42,6 +42,7 @@ h3{
 }
 h4{
     font-size: 3.5rem;
+    line-height: 1.1;
 }
 
 
@@ -158,21 +159,34 @@ h4{
     color: rgb(210,100,20);
     mix-blend-mode: darken;
 }
+
+/* slide-wrapper */
+.wrapper{
+    display: flex;
+    width: 400vw;
+    height: auto;
+    overflow: hidden;
+    transition: all .7s ease;
+}
+
+[class^="wrapper__slide-"]{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+[class^="wrapper__slide-"] > *{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
 /* content */
 .contents{
     color: rgb(60,80,100);
 }
-.contents [class^="contents__slide-"]{
-    visibility: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.contents [class^="contents__slide-"].active{
-    visibility: visible;
-}
-
-
 .contents p{
     font-size: 2.5rem;
     font-family: 'RobotoMono-Medium';
@@ -187,12 +201,15 @@ h4{
     top: 34vmin;
     left: 19vmin;
 }
+.slide-1_pa-0_p-0{
+    margin: 1vmin 0 0 0;
+}
 .slide-1_pa-1{
     top: 25vmin;
     left: 163vmin;
 }
 .slide-1_pa-2{
-    top: 56vmin;
+    top: 57vmin;
     left: 149vmin;
 }
 .slide-1_pa-3{
@@ -203,10 +220,10 @@ h4{
 /* content slide 2 */
 .slide-2_pa-0{
     top: 32vmin;
-    left: 13vmin;
+    left: 16vmin;
 }
 .slide-2_pa-0_p-0{
-    margin: 2vmin 0 0 2vmin;
+    margin: 2.5vmin 0 0 2vmin;
 }
 .slide-2_pa-0_p-1{
     margin: 2vmin 0 0 3.5vmin;
@@ -214,65 +231,99 @@ h4{
 
 .slide-2_pa-1{
     top: 16vmin;
-    left: 148vmin;
+    left: 154vmin;
 }
 .slide-2_pa-1_p-0{
-    margin: 4vmin 0 0 8vmin;
+    margin: 5vmin 0 0 8vmin;
 }
 .slide-2_pa-1_p-1{
-    margin: 2.5vmin 0 0 6vmin;
+    margin: 2vmin 0 0 6vmin;
 }
 .slide-2_pa-1_p-2{
     margin: 2vmin 0 0 14vmin;
 }
 .slide-2_pa-1_p-3{
-    margin: 2vmin 0 0 10vmin;
-}
-.slide-2_pa-2{
-    top: 56vmin;
-    left: 149vmin;
-}
-.slide-2_pa-3{
-    top: 8vmin;
-    left: 163vmin;
+    margin: 2.5vmin 0 0 10vmin;
 }
 
 /* content slide 3 */
-.contents__slide-3 .contents__paragraph-0{
-    top: 34vmin;
-    left: 19vmin;
+[class^="slide-3_pa-"] p{
+    font-size: 2.2rem;
 }
-.contents__slide-3 .contents__paragraph-1{
-    top: 25vmin;
-    left: 163vmin;
+.slide-3_pa-0{
+    top: 32vmin;
+    left: 11vmin;
 }
-.contents__slide-3 .contents__paragraph-2{
-    top: 56vmin;
-    left: 149vmin;
+.slide-3_pa-0_p-0{
+    margin: 1vmin 0 0 0vmin;
 }
-.contents__slide-3 .contents__paragraph-3{
-    top: 8vmin;
-    left: 163vmin;
+.slide-3_pa-1{
+    top: 43vmin;
+    left: 11vmin;
+}
+.slide-3_pa-1_p-0{
+    margin: 1vmin 0 0 0vmin;
+}
+.slide-3_pa-2{
+    top: 6vmin;
+    left: 147vmin;
+}
+.slide-3_pa-2_p-0{
+    margin: 1vmin 0 0 0vmin;
+}
+.slide-3_pa-3{
+    top: 16.5vmin;
+    left: 158.5vmin;
+}
+.slide-3_pa-3_p-0{
+    margin: 1vmin 0 0 0vmin;
+}
+.slide-3_pa-4{
+    top: 60vmin;
+    left: 161.5vmin;
+}
+.slide-3_pa-4_p-0{
+    margin: 1vmin 0 0 0vmin;
+}
+.slide-3_pa-5{
+    top: 73.5vmin;
+    left: 161.5vmin;
+}
+.slide-3_pa-5_p-0{
+    margin: 1vmin 0 0 0vmin;
 }
 
 /* content slide 4 */
-.contents__slide-4 .contents__paragraph-0{
-    top: 34vmin;
-    left: 19vmin;
+.slide-4_pa-0{
+    top: 30vmin;
+    left: 20vmin;
 }
-.contents__slide-4 .contents__paragraph-1{
-    top: 25vmin;
-    left: 163vmin;
+.slide-4_pa-0_p-0{
+    margin: 4vmin 0 0 9vmin;
 }
-.contents__slide-4 .contents__paragraph-2{
-    top: 56vmin;
-    left: 149vmin;
+.slide-4_pa-0_p-1{
+    margin: 3vmin 0 0 3.5vmin;
 }
-.contents__slide-4 .contents__paragraph-3{
-    top: 8vmin;
-    left: 163vmin;
+.slide-4_pa-0_p-2{
+    margin: 2.5vmin 0 0 16vmin;
 }
 
+.slide-4_pa-1{
+    top: 13vmin;
+    left: 158vmin;
+}
+.slide-4_pa-1_p-0{
+    margin: 4vmin 0 0 4vmin;
+}
+.slide-4_pa-1_p-1{
+    margin: 2.5vmin 0 0 0;
+}
+.slide-4_pa-1_p-2{
+    margin: 3vmin 0 0 10vmin;
+}
+.slide-4_pa-1_p-3{
+    margin: 3vmin 0 0 6vmin;
+}
 
 
 
@@ -291,11 +342,26 @@ h4{
 
 
 /* background */
-.layer__background{
-    background: url('../image/bg/bg1.png') no-repeat center center;
-    background-size: cover;
+.background{
     z-index: -1;
 }
+.wrapper__slide-1 .background{
+    background: url('../image/bg/bg1.png') no-repeat center center;
+    background-size: fill;
+}
+.wrapper__slide-2 .background{
+    background: url('../image/bg/bg2.png') no-repeat center center;
+    background-size: fill;
+}
+.wrapper__slide-3 .background{
+    background: url('../image/bg/bg3.png') no-repeat center center;
+    background-size: fill;
+}
+.wrapper__slide-4 .background{
+    background: url('../image/bg/bg4.png') no-repeat center center;
+    background-size: fill;
+}
+
 
 .image-wrapper{
     position: absolute;
@@ -306,6 +372,11 @@ h4{
     display: block;
     left: 49vmin;
     top: 25.5vmin;
+}
+.image-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .decoration{
     position: absolute;
@@ -381,4 +452,3 @@ h4{
 .sample img{
     object-fit: fill;
 }
-

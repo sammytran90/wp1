@@ -12,6 +12,109 @@
 <body>
     <div id="app">
 
+        <!-- content -->
+        <div class="layer wrapper" :style="{transform: ['translate3d(' + nextSlideDemo(slide) + 'px,0,0)']}">
+            <!-- slide-1 -->
+            <div class="wrapper__slide-1">
+                <div class="contents">
+                    <div v-for="(para,index2) in contents.slides[0]" :class="['slide-1_pa-' + index2]">
+                        <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
+                        <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
+                        <div v-for="(phase,index3) in para.content" :class="['slide-1_pa-' + index2 + '_p-' + index3]">
+                            <p v-for="words in phase">{{words}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="background">
+                    <div class="image-wrapper">
+                        <img src="./assets/image/pics/pic1.png" alt="image here">
+                    </div>
+
+                    <div class="decoration decoration_1">
+                        <span class="icon-deco1 blending_color-burn"></span>
+                    </div>
+                    <div class="decoration decoration_2">
+                        <span class="icon-deco2 blending_color-burn"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- slide-2 -->
+            <div class="wrapper__slide-2">
+                <div class="contents">
+                    <div v-for="(para,index2) in contents.slides[1]" :class="['slide-2_pa-' + index2]">
+                        <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
+                        <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
+                        <div v-for="(phase,index3) in para.content" :class="['slide-2_pa-' + index2 + '_p-' + index3]">
+                            <p v-for="words in phase">{{words}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="background">
+                    <div class="image-wrapper">
+                        <img src="./assets/image/pics/pic2.png" alt="image here">
+                    </div>
+
+                    <div class="decoration decoration_1">
+                        <span class="icon-deco1 blending_color-burn"></span>
+                    </div>
+                    <div class="decoration decoration_2">
+                        <span class="icon-deco2 blending_color-burn"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- slide-3 -->
+            <div class="wrapper__slide-3">
+                <div class="contents">
+                    <div v-for="(para,index2) in contents.slides[2]" :class="['slide-3_pa-' + index2]">
+                        <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
+                        <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
+                        <div v-for="(phase,index3) in para.content" :class="['slide-3_pa-' + index2 + '_p-' + index3]">
+                            <p v-for="words in phase">{{words}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="background">
+                    <div class="image-wrapper">
+                        <img src="./assets/image/pics/pic3.png" alt="image here">
+                    </div>
+
+                    <div class="decoration decoration_1">
+                        <span class="icon-deco1 blending_color-burn"></span>
+                    </div>
+                    <div class="decoration decoration_2">
+                        <span class="icon-deco2 blending_color-burn"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- slide-4 -->
+            <div class="wrapper__slide-4">
+                <div class="contents">
+                    <div v-for="(para,index2) in contents.slides[3]" :class="['slide-4_pa-' + index2]">
+                        <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
+                        <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
+                        <div v-for="(phase,index3) in para.content" :class="['slide-4_pa-' + index2 + '_p-' + index3]">
+                            <p v-for="words in phase">{{words}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="background">
+                    <div class="image-wrapper">
+                        <img src="./assets/image/pics/pic4.png" alt="image here">
+                    </div>
+
+                    <div class="decoration decoration_1">
+                        <span class="icon-deco1 blending_color-burn"></span>
+                    </div>
+                    <div class="decoration decoration_2">
+                        <span class="icon-deco2 blending_color-burn"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- main-tittles -->
         <div class="layer tittles">
             <!-- slogan -->
@@ -34,53 +137,6 @@
             <div class="tittles__date">13 Jun 2018, The Hague</div>
         </div>
 
-        <!-- content -->
-        <div class="layer contents">
-            <!-- slide-1 -->
-            <div class="contents__slide-1" :class="[slide == 1 ? 'active' : '']">
-                <div v-for="(para,index2) in contents.slides[0]" :class="['slide-1_pa-' + index2]">
-                    <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
-                    <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
-                    <div v-for="(phase,index3) in para.content" :class="['slide-1_pa-' + index2 + '_p-' + index3]">
-                        <p v-for="words in phase">{{words}}</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- slide-2 -->
-            <div class="contents__slide-2" :class="[slide == 2 ? 'active' : '']">
-                <div v-for="(para,index2) in contents.slides[1]" :class="['slide-2_pa-' + index2]">
-                    <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
-                    <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
-                    <div v-for="(phase,index3) in para.content" :class="['slide-2_pa-' + index2 + '_p-' + index3]">
-                        <p v-for="words in phase">{{words}}</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- slide-3 -->
-            <div class="contents__slide-3" :class="[slide == 3 ? 'active' : '']">
-                <div v-for="(para,index2) in contents.slides[2]" :class="['slide-3_pa-' + index2]">
-                    <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
-                    <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
-                    <div v-for="(phase,index3) in para.content" :class="['slide-3_pa-' + index2 + '_p-' + index3]">
-                        <p v-for="words in phase">{{words}}</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- slide-4 -->
-            <div class="contents__slide-4" :class="[slide == 4 ? 'active' : '']">
-                <div v-for="(para,index2) in contents.slides[3]" :class="['slide-4_pa-' + index2]">
-                    <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
-                    <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
-                    <div v-for="(phase,index3) in para.content" :class="['slide-4_pa-' + index2 + '_p-' + index3]">
-                        <p v-for="words in phase">{{words}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- controller -->
         <div class="layer controller">
             <ul class="controller__list">
@@ -91,22 +147,8 @@
             </ul>
         </div>
 
-        <!-- background -->
-        <div class="layer layer__background">
-            <div class="image-wrapper">
-                <img src="" alt="image here">
-            </div>
-
-            <div class="decoration decoration_1">
-                <span class="icon-deco1 blending_color-burn"></span>
-            </div>
-            <div class="decoration decoration_2">
-                <span class="icon-deco2 blending_color-burn"></span>
-            </div>
-        </div>
-
-        <div class="sample" style="display: none">
-            <img src="./assets/image/test/slide2.png" alt="sample" class="sample">
+        <div class="sample" style="display: block">
+            <img :src="'./assets/image/test/slide' + slide + '.png'" alt="sample" class="sample">
         </div>
     </div>
 
