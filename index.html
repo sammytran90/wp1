@@ -11,11 +11,10 @@
 
 <body>
     <div id="app">
-
         <!-- content -->
         <div class="layer wrapper" :style="{transform: ['translate3d(' + nextSlideDemo(slide) + 'px,0,0)']}">
             <!-- slide-1 -->
-            <div class="wrapper__slide-1">
+            <div class="wrapper__slide-1" ref="slide1">
                 <div class="contents">
                     <div v-for="(para,index2) in contents.slides[0]" :class="['slide-1_pa-' + index2]">
                         <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
@@ -30,17 +29,20 @@
                         <img src="./assets/image/pics/pic1.png" alt="image here">
                     </div>
 
-                    <div class="decoration decoration_1">
-                        <span class="icon-deco1 blending_color-burn"></span>
+                    <div class="decoration decoration_11">
+                        <img class="blending_color-burn" src="./assets/image/deco/deco1.svg" alt="">
                     </div>
-                    <div class="decoration decoration_2">
-                        <span class="icon-deco2 blending_color-burn"></span>
+                    <div class="decoration decoration_12 rotate">
+                        <img src="./assets/image/deco/deco2.png" alt="">
+                    </div>
+                    <div class="decoration decoration_13">
+                        <img class="blending_color-burn" src="./assets/image/deco/deco4.svg" alt="">
                     </div>
                 </div>
             </div>
 
             <!-- slide-2 -->
-            <div class="wrapper__slide-2">
+            <div class="wrapper__slide-2" ref="slide2">
                 <div class="contents">
                     <div v-for="(para,index2) in contents.slides[1]" :class="['slide-2_pa-' + index2]">
                         <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
@@ -55,17 +57,17 @@
                         <img src="./assets/image/pics/pic2.png" alt="image here">
                     </div>
 
-                    <div class="decoration decoration_1">
-                        <span class="icon-deco1 blending_color-burn"></span>
+                    <div class="decoration decoration_21">
+                        <img class="blending_color-burn" src="./assets/image/deco/deco3.svg" alt="">
                     </div>
-                    <div class="decoration decoration_2">
-                        <span class="icon-deco2 blending_color-burn"></span>
+                    <div class="decoration decoration_22">
+                        <img class="blending_color-burn" src="./assets/image/deco/deco1.svg" alt="">
                     </div>
                 </div>
             </div>
 
             <!-- slide-3 -->
-            <div class="wrapper__slide-3">
+            <div class="wrapper__slide-3" ref="slide3">
                 <div class="contents">
                     <div v-for="(para,index2) in contents.slides[2]" :class="['slide-3_pa-' + index2]">
                         <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
@@ -80,17 +82,20 @@
                         <img src="./assets/image/pics/pic3.png" alt="image here">
                     </div>
 
-                    <div class="decoration decoration_1">
-                        <span class="icon-deco1 blending_color-burn"></span>
+                    <div class="decoration decoration_31 rotate">
+                        <img src="./assets/image/deco/deco2.png" alt="">
                     </div>
-                    <div class="decoration decoration_2">
-                        <span class="icon-deco2 blending_color-burn"></span>
+                    <div class="decoration decoration_32">
+                        <img class="blending_color-burn" src="./assets/image/deco/deco3.svg" alt="">
+                    </div>
+                    <div class="decoration decoration_33">
+                        <img class="blending_color-burn" src="./assets/image/deco/deco1.svg" alt="">
                     </div>
                 </div>
             </div>
 
             <!-- slide-4 -->
-            <div class="wrapper__slide-4">
+            <div class="wrapper__slide-4" ref="slide4">
                 <div class="contents">
                     <div v-for="(para,index2) in contents.slides[3]" :class="['slide-4_pa-' + index2]">
                         <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
@@ -105,11 +110,15 @@
                         <img src="./assets/image/pics/pic4.png" alt="image here">
                     </div>
 
-                    <div class="decoration decoration_1">
-                        <span class="icon-deco1 blending_color-burn"></span>
+                    <div class="decoration decoration_41">
+                        <img class="blending_color-burn" src="./assets/image/deco/deco1.svg" alt="">
                     </div>
-                    <div class="decoration decoration_2">
-                        <span class="icon-deco2 blending_color-burn"></span>
+                    <div class="decoration decoration_42 rotate">
+                        <img src="./assets/image/deco/deco2.png" alt="">
+                    </div>
+                    <div class="decoration decoration_43">
+                        <img class="blending_color-burn" src="./assets/image/deco/deco3.svg" alt="">
+
                     </div>
                 </div>
             </div>
@@ -134,22 +143,22 @@
                     <h2 class="blending_color-burn">{{contents.topic}}</h2>
                 </div>
             </div>
-            <div class="tittles__date">13 Jun 2018, The Hague</div>
+            <div class="tittles__date">29 May 2018, The Hague</div>
         </div>
 
         <!-- controller -->
         <div class="layer controller">
             <ul class="controller__list">
-                <li class="controller__item blending_color-burn" @click="slide=1" :class="slide == 1 ? 'active' : ''">Meetup #2</li>
-                <li class="controller__item blending_color-burn" @click="slide=2" :class="slide == 2 ? 'active' : ''">Situation</li>
-                <li class="controller__item blending_color-burn" @click="slide=3" :class="slide == 3 ? 'active' : ''">Challenges</li>
-                <li class="controller__item blending_color-burn" @click="slide=4" :class="slide == 4 ? 'active' : ''">Next steps</li>
+                <li class="controller__item blending_color-burn" @click="slide=1;contentAnimation('slide1')" :class="slide == 1 ? 'active' : ''">Meetup #2</li>
+                <li class="controller__item blending_color-burn" @click="slide=2;contentAnimation('slide2')" :class="slide == 2 ? 'active' : ''">Situation</li>
+                <li class="controller__item blending_color-burn" @click="slide=3;contentAnimation('slide3')" :class="slide == 3 ? 'active' : ''">Challenges</li>
+                <li class="controller__item blending_color-burn" @click="slide=4;contentAnimation('slide4')" :class="slide == 4 ? 'active' : ''">Next steps</li>
             </ul>
         </div>
 
-        <div class="sample" style="display: block">
+        <!-- <div class="sample" style="display: block">
             <img :src="'./assets/image/test/slide' + slide + '.png'" alt="sample" class="sample">
-        </div>
+        </div> -->
     </div>
 
     <script src="./libs/vuejs/vue.js"></script>

@@ -16,9 +16,17 @@ body, ul ,h1,h2,h3,h4,h5,h6,p{
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden; 
+    overflow: hidden;
 }
-
+@media (max-width: 1280px){
+    #app,
+    .controller,
+    .tittles,
+    [class^="wrapper__slide-"]{
+        min-width: 200vmin;
+    }
+    
+}
 ul li{
     list-style: none;
     display: inline;
@@ -32,19 +40,29 @@ h2{
 }
 
 h1{
-    font-size: 12rem;
+    font-size: 13.5rem;
 }
 h2{
-    font-size: 7.5rem;
+    font-size: 8rem;
 }
 h3{
-    font-size: 4rem;
+    font-size: 6rem;
 }
 h4{
-    font-size: 3.5rem;
-    line-height: 1.1;
+    font-size: 3.9rem;
+    line-height: .9;
+}
+.contents > [class*="slide-"]{
+    transition: all 1.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(3vmin);
 }
 
+.contents > [class*="slide-"].visual{
+    transition: all 1.5s ease-in-out;
+    transform: translateY(0) !important;
+    opacity: 1;
+}
 
 /* layer */
 .layer{
@@ -64,19 +82,20 @@ h4{
 .controller,
 .tittles{
     font-family: 'RobotoMono-Medium';
+    /* min-width: 200vmin; */
 }
 .controller__list{
-    bottom: 6vmin;
-    left: 2vmin;
+    bottom: 3.5vmin;
+    left: 2.5vmin;
 }
 
 .controller__item{
     display: table;
     position: relative;
     cursor: pointer;
-    font-size: 4.3rem;
+    font-size: 4.6rem;
     font-weight: 500;
-    line-height: 1.3;
+    line-height: 1.4;
 }
 .controller__item.active{
     color: rgb(240, 195, 15);
@@ -89,18 +108,18 @@ h4{
 /* tittles */
 .tittles__insight{
     color: rgb(210,100,20);
-    font-size: 2rem;
-    padding: 2.2vmin 4vmin;
+    font-size: 2.3rem;
+    margin: 2vmin 0 0 3vmin;
 }
 .tittles__tittle-wrapper{
-    width: 106vmin;
-    height: 73vmin;
-    left: 48vmin;
-    top: 13.5vmin;
+    width: 108vmin;
+    height: 82vmin;
+    left: 48.5vmin;
+    top: 10vmin;
 }
 .tittles__decoration{
     box-sizing: border-box;
-    width: 78%;
+    width: 77%;
     height: 100%;
     border: 2vw solid rgba(240,195,15,0.5);
     mix-blend-mode: multiply;
@@ -115,21 +134,20 @@ h4{
     color: rgb(16,52,153);
 }
 .tittles__small-tittle{
-    top: 13vmin;
-    left: 22vmin;
+    top: 9.5vmin;
+    left: 21.5vmin;
     width: 20vmin;
-    line-height: 1;
 }
 .tittles__tittle{
     top: 0;
     left: 0;
-    line-height: .7;
-    letter-spacing: .9rem;
+    line-height: 9.5rem;
+    letter-spacing: .1rem;
     position: absolute;
 }
 .tittles__topic{
     position: absolute;
-    letter-spacing: .7rem;
+    letter-spacing: .6rem;
     bottom: 0;
     text-align: right;
     right: 0;
@@ -158,6 +176,7 @@ h4{
     font-size: 5.5rem;
     color: rgb(210,100,20);
     mix-blend-mode: darken;
+    line-height: 1.1;
 }
 
 /* slide-wrapper */
@@ -170,9 +189,10 @@ h4{
 }
 
 [class^="wrapper__slide-"]{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: relative;
+    /* min-width: 200vmin; */
 }
 [class^="wrapper__slide-"] > *{
     position: absolute;
@@ -188,9 +208,9 @@ h4{
     color: rgb(60,80,100);
 }
 .contents p{
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     font-family: 'RobotoMono-Medium';
-    line-height: 1.1;
+    line-height: 1.17;
 }
 
 [class*="_pa-"]:not([class*="_p-"]){
@@ -198,29 +218,47 @@ h4{
 }
 /* content slide 1 */
 .slide-1_pa-0{
-    top: 34vmin;
+    top: 32vmin;
     left: 19vmin;
 }
 .slide-1_pa-0_p-0{
-    margin: 1vmin 0 0 0;
+    margin: 1.5vmin 0 0 0;
 }
 .slide-1_pa-1{
     top: 25vmin;
     left: 163vmin;
 }
 .slide-1_pa-2{
-    top: 57vmin;
-    left: 149vmin;
+    top: 58vmin;
+    left: 152vmin;
+}
+.slide-1_pa-2_p-0{
+    margin: 1.5vmin 0 0 0;
 }
 .slide-1_pa-3{
     top: 8vmin;
     left: 163vmin;
 }
+.slide-1_pa-3 h3{
+    position: absolute;
+}
+.slide-1_pa-3 h3:nth-of-type(1){
+    transform: rotate(-90deg);
+    top: 1vmin;
+    left: -8vmin;
+}
+.slide-1_pa-3 h3:nth-of-type(2){
+    top: -3vmin;
+    left: 2vmin;
+}
+.slide-1_pa-3_p-0{
+    margin: 5vmin 0 0 3vmin;
+}
 
 /* content slide 2 */
 .slide-2_pa-0{
-    top: 32vmin;
-    left: 16vmin;
+    top: 32.5vmin;
+    left: 14vmin;
 }
 .slide-2_pa-0_p-0{
     margin: 2.5vmin 0 0 2vmin;
@@ -230,20 +268,20 @@ h4{
 }
 
 .slide-2_pa-1{
-    top: 16vmin;
-    left: 154vmin;
+    top: 17vmin;
+    left: 155vmin;
 }
 .slide-2_pa-1_p-0{
-    margin: 5vmin 0 0 8vmin;
+    margin: 4vmin 0 0 9vmin;
 }
 .slide-2_pa-1_p-1{
-    margin: 2vmin 0 0 6vmin;
+    margin: 1.5vmin 0 0 7vmin;
 }
 .slide-2_pa-1_p-2{
-    margin: 2vmin 0 0 14vmin;
+    margin: 1vmin 0 0 15vmin;
 }
 .slide-2_pa-1_p-3{
-    margin: 2.5vmin 0 0 10vmin;
+    margin: 2vmin 0 0 11vmin;
 }
 
 /* content slide 3 */
@@ -251,7 +289,7 @@ h4{
     font-size: 2.2rem;
 }
 .slide-3_pa-0{
-    top: 32vmin;
+    top: 30.5vmin;
     left: 11vmin;
 }
 .slide-3_pa-0_p-0{
@@ -265,29 +303,29 @@ h4{
     margin: 1vmin 0 0 0vmin;
 }
 .slide-3_pa-2{
-    top: 6vmin;
-    left: 147vmin;
+    top: 7vmin;
+    left: 150.5vmin;
 }
 .slide-3_pa-2_p-0{
     margin: 1vmin 0 0 0vmin;
 }
 .slide-3_pa-3{
-    top: 16.5vmin;
-    left: 158.5vmin;
+    top: 19vmin;
+    left: 162vmin;
 }
 .slide-3_pa-3_p-0{
     margin: 1vmin 0 0 0vmin;
 }
 .slide-3_pa-4{
-    top: 60vmin;
-    left: 161.5vmin;
+    top: 59vmin;
+    left: 162.5vmin;
 }
 .slide-3_pa-4_p-0{
     margin: 1vmin 0 0 0vmin;
 }
 .slide-3_pa-5{
-    top: 73.5vmin;
-    left: 161.5vmin;
+    top: 74vmin;
+    left: 162.5vmin;
 }
 .slide-3_pa-5_p-0{
     margin: 1vmin 0 0 0vmin;
@@ -295,34 +333,34 @@ h4{
 
 /* content slide 4 */
 .slide-4_pa-0{
-    top: 30vmin;
+    top: 30.5vmin;
     left: 20vmin;
 }
 .slide-4_pa-0_p-0{
-    margin: 4vmin 0 0 9vmin;
+    margin: 4.5vmin 0 0 9.5vmin;
 }
 .slide-4_pa-0_p-1{
-    margin: 3vmin 0 0 3.5vmin;
+    margin: 2vmin 0 0 4vmin;
 }
 .slide-4_pa-0_p-2{
-    margin: 2.5vmin 0 0 16vmin;
+    margin: 2vmin 0 0 16vmin;
 }
 
 .slide-4_pa-1{
-    top: 13vmin;
-    left: 158vmin;
+    top: 13.5vmin;
+    left: 160vmin;
 }
 .slide-4_pa-1_p-0{
-    margin: 4vmin 0 0 4vmin;
+    margin: 4vmin 0 0 4.5vmin;
 }
 .slide-4_pa-1_p-1{
-    margin: 2.5vmin 0 0 0;
+    margin: 1.5vmin 0 0 .5vmin;
 }
 .slide-4_pa-1_p-2{
-    margin: 3vmin 0 0 10vmin;
+    margin: 2.5vmin 0 0 10.5vmin;
 }
 .slide-4_pa-1_p-3{
-    margin: 3vmin 0 0 6vmin;
+    margin: 2vmin 0 0 6.5vmin;
 }
 
 
@@ -344,34 +382,19 @@ h4{
 /* background */
 .background{
     z-index: -1;
-}
-.wrapper__slide-1 .background{
     background: url('../image/bg/bg1.png') no-repeat center center;
-    background-size: fill;
+    background-size: cover;
 }
-.wrapper__slide-2 .background{
-    background: url('../image/bg/bg2.png') no-repeat center center;
-    background-size: fill;
-}
-.wrapper__slide-3 .background{
-    background: url('../image/bg/bg3.png') no-repeat center center;
-    background-size: fill;
-}
-.wrapper__slide-4 .background{
-    background: url('../image/bg/bg4.png') no-repeat center center;
-    background-size: fill;
-}
-
 
 .image-wrapper{
     position: absolute;
-    width: 105vmin;
-    height: 52vmin;
+    width: 107.5vmin;
+    height: 59vmin;
     background: rgba(240,195,15,.5);
     background-blend-mode: multiply;
     display: block;
     left: 49vmin;
-    top: 25.5vmin;
+    top: 24vmin;
 }
 .image-wrapper img{
     width: 100%;
@@ -380,18 +403,84 @@ h4{
 }
 .decoration{
     position: absolute;
-    color: rgb(16,52,153);
+    animation-fill-mode: forwards;
 }
-.decoration_1{
-    font-size: 14rem;
-    bottom: 8vmin;
-    right: 23vmin;
+.decoration > img{
+    width: 100%;
+    height: 100%;
 }
-.decoration_2{
-    font-size: 13rem;
-    left: -3vmin;
-    bottom: 28vmin;
+.decoration_11{
+    top: 80vmin;
+    left: 176vmin;
+    width: 8.5vmin;
 }
+.decoration_12{
+    left: -4.5vmin;
+    top: 52.5vmin;
+    width: 15vmin;
+}
+.decoration_13{
+    left: 160.5vmin;
+    top: 20vmin;
+    width: 21vmin;
+}
+
+.decoration_21{
+    top: 63vmin;
+    left: 30vmin;
+    transform: rotate(180deg);
+    width: 13vmin;
+    mix-blend-mode: color-burn;
+}
+.decoration_22{
+    left: 175.5vmin;
+    top: 79.5vmin;
+    width: 8.5vmin;
+}
+.decoration_31{
+    left: -10vmin;
+    top: 5.5vmin;
+    width: 18vmin;
+}
+.decoration_32{
+    left: 37vmin;
+    top: 81.5vmin;
+    width: 13.5vmin;
+}
+.decoration_33{
+    left: 177.5vmin;
+    top: 42.5vmin;
+    width: 7vmin;
+}
+.decoration_41{
+    left: 8vmin;
+    top: 41.5vmin;
+    width: 7.5vmin;
+}
+.decoration_42{
+    left: 143vmin;
+    top: -11.5vmin;
+    width: 18.5vmin;
+}
+.decoration_43{
+    left: 170vmin;
+    bottom: 5.5vmin;
+    width: 16vmin;
+    transform: rotate(270deg);
+    mix-blend-mode: color-burn;
+}
+
+/* decoration animation */
+.wrapper.sliding .rotate{
+    animation: roateAround 5s infinite linear;
+}
+
+
+@keyframes roateAround{
+    from {transform: rotate(0)}
+    to {transform: rotate(360deg)};
+}
+
 .blending_color-burn{
     mix-blend-mode: color-burn;
 }

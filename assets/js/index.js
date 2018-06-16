@@ -41,7 +41,7 @@ var app = new Vue({
                     },
                     {
                         tittle4: [
-                            'Why burenrechter'
+                            'Why burenrechter?'
                         ],
                         content: [
                             [
@@ -53,8 +53,8 @@ var app = new Vue({
                     },
                     {
                         tittle3: [
-                            '+ / -',
-                            100000
+                            '+/-',
+                            '100,000'
                         ],
                         content: [
                             [
@@ -184,8 +184,7 @@ var app = new Vue({
                             [
                                 '- Be a go-to point for ',
                                 'questions and support.',
-                                '- Focus on',
-                                'de-escalating. ',
+                                '- Focus on de-escalating.',
                                 '- Create empathy.',
                                 '- Get rewards on ',
                                 'social point system'
@@ -260,6 +259,31 @@ var app = new Vue({
             var def = document.querySelector('body').clientWidth;
             return (value - 1) * -1 * def;
         },
+        contentAnimation: function (element) {
+            // clear all other slide visual
+            var allEl = document.querySelectorAll('.contents > [class*="slide-"]');
+            allEl.forEach(function (v) {
+                var classArr = v.className.split(" ");
+                var originalClass = classArr.filter(v => v.indexOf('slide-') != -1);
+                v.className = originalClass[0];
+            });
+            var wrapper = document.querySelector('.wrapper');
+            var wrapperOldClass = wrapper.className;
+            var wrapperNewClass = wrapperOldClass.split(" ").push('sliding').join(" ");
+            wrapper.className = wrapperNewClass;
+            setTimeout(async function () {
+                wrapper.className = wrapperOldClass;
+            }, 700)
+
+            // set visual for current slide
+            var parent = this.$refs[`${element}`];
+            var parentName = parent.nodeName + '.' + parent.className;
+            var querrySeletorAl = parentName + ' .contents > [class*="slide-"]';
+            var allElement = document.querySelectorAll(querrySeletorAl);
+            allElement.forEach(function (a) {
+                a.className += ' visual';
+            })
+        },
         testScroll: function () {
             console.log('scroll');
         }
@@ -269,7 +293,9 @@ var app = new Vue({
         window.addEventListener('scroll', this.testScroll);
     },
     mounted() {
-        
+
+    },
+    ready() {
     }
     // destroyed() {
     //     window.removeEventListener('scroll', this.testScroll);
