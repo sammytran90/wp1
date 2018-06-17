@@ -1,0 +1,9 @@
+/* responsive */
+@media (max-width: 1800px){
+    #app,
+    .controller,
+    .tittles,
+    [class^="wrapper__slide-"]{
+        min-width: 200vmin;
+    }    
+}

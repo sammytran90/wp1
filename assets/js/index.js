@@ -3,6 +3,7 @@ var app = new Vue({
     data: {
         slide: 1,
         translateContent: 0,
+        hover: false,
         date: null,
         contents: {
             smalltittle: 'Legal Design Thinking',
@@ -41,13 +42,25 @@ var app = new Vue({
                     },
                     {
                         tittle4: [
-                            'Why burenrechter?'
+                            [
+                                'Wh',
+                                'y burenrechter?'
+                            ]
                         ],
                         content: [
                             [
-                                'Law processes',
-                                'fail to achieve',
-                                'win-win solutions'
+                                [
+                                    'Law',
+                                    ' processes'
+                                ],
+                                [
+                                    'fai',
+                                    'l to achieve'
+                                ],
+                                [
+                                    'win',
+                                    '-win solutions'
+                                ]
                             ]
                         ]
                     },
@@ -256,7 +269,7 @@ var app = new Vue({
             return today.getDate() + ' ' + months[today.getMonth()] + ' ' + today.getFullYear();
         },
         nextSlideDemo: function (value) {
-            var def = document.querySelector('body').clientWidth;
+            var def = document.querySelector('.wrapper__slide-1').clientWidth;
             return (value - 1) * -1 * def;
         },
         contentAnimation: function (element) {
@@ -269,7 +282,9 @@ var app = new Vue({
             });
             var wrapper = document.querySelector('.wrapper');
             var wrapperOldClass = wrapper.className;
-            var wrapperNewClass = wrapperOldClass.split(" ").push('sliding').join(" ");
+            var wrapperNewClass = wrapperOldClass.split(" ");
+            wrapperNewClass.push('sliding');
+            wrapperNewClass = wrapperNewClass.join(" ");
             wrapper.className = wrapperNewClass;
             setTimeout(async function () {
                 wrapper.className = wrapperOldClass;

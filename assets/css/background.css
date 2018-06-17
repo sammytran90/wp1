@@ -1,0 +1,106 @@
+
+/* background */
+.background{
+    z-index: -1;
+    background: url('../image/bg/bg1.png') no-repeat center center;
+    background-size: cover;
+}
+
+.image-wrapper{
+    position: absolute;
+    width: 107.5vmin;
+    height: 59vmin;
+    background: rgba(240,195,15,.5);
+    background-blend-mode: multiply;
+    display: block;
+    left: 49vmin;
+    top: 24vmin;
+}
+.image-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.decoration{
+    position: absolute;
+    animation-fill-mode: forwards;
+    transition: all 1.4s ease-in-out;
+}
+.decoration > img{
+    width: 100%;
+    height: 100%;
+}
+.decoration_11{
+    top: 80vmin;
+    left: 176vmin;
+    width: 8.5vmin;
+}
+.decoration_12{
+    left: -4.5vmin;
+    top: 52.5vmin;
+    width: 15vmin;
+}
+.decoration_13{
+    left: 160.5vmin;
+    top: 20vmin;
+    width: 21vmin;
+    transition: all 2s ease-out;
+}
+.decoration_13-forward{
+    transform: translateX(16vmin);
+    transition: all 2s ease-out;
+}
+.decoration_21{
+    top: 63vmin;
+    left: 30vmin;
+    transform: rotate(180deg);
+    width: 13vmin;
+    mix-blend-mode: color-burn;
+}
+.decoration_22{
+    left: 175.5vmin;
+    top: 79.5vmin;
+    width: 8.5vmin;
+}
+.decoration_23{
+    left: -39.5vmin;
+    top: 20vmin;
+    width: 21vmin;
+    transition: all 2s ease-out;
+}
+.decoration_23-forward{
+    transform: translate(29vmin);
+    transition: all 2s ease-out;
+}
+.decoration_31{
+    left: -10vmin;
+    top: 5.5vmin;
+    width: 18vmin;
+}
+.decoration_32{
+    left: 37vmin;
+    top: 81.5vmin;
+    width: 13.5vmin;
+}
+.decoration_33{
+    left: 177.5vmin;
+    top: 42.5vmin;
+    width: 7vmin;
+}
+.decoration_41{
+    left: 8vmin;
+    top: 41.5vmin;
+    width: 7.5vmin;
+}
+.decoration_42{
+    left: 143vmin;
+    top: -11.5vmin;
+    width: 18.5vmin;
+}
+.decoration_43{
+    left: 170vmin;
+    bottom: 5.5vmin;
+    width: 16vmin;
+    transform: rotate(270deg);
+    mix-blend-mode: color-burn;
+}
