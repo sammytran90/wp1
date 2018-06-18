@@ -1,6 +1,6 @@
 /* content slide 3 */
 [class^="slide-3_pa-"] p{
-    font-size: 2.2rem;
+    font-size: 2.2rem !important;
 }
 .slide-3_pa-0{
     top: 30.5vmin;
