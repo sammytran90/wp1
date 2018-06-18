@@ -163,7 +163,7 @@
         </div>
 
         <!-- controller -->
-        <div class="layer controller">
+        <div class="layer controller" v-on:wheel="testScroll">
             <ul class="controller__list">
                 <li class="controller__item blending_color-burn" @mouseenter="hover=true" @mouseleave="hover=false" @click="slide=1;contentAnimation('slide1')"
                     :class="slide == 1 ? 'active' : ''">Meetup #2</li>

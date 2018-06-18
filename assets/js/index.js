@@ -299,8 +299,15 @@ var app = new Vue({
                 a.className += ' visual';
             })
         },
-        testScroll: function () {
-            console.log('scroll');
+        testScroll: function (e) {
+            var position = e.deltaY;
+            // console.log(position);
+            if (position > 0 && this.slide < 4) {
+                this.slide++;
+            } else if (position < 0 && this.slide > 1) {
+                this.slide--;
+            }
+            this.contentAnimation('slide' + this.slide);
         }
     },
     created() {
@@ -312,7 +319,4 @@ var app = new Vue({
     },
     ready() {
     }
-    // destroyed() {
-    //     window.removeEventListener('scroll', this.testScroll);
-    // }
 })
