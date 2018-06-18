@@ -280,15 +280,6 @@ var app = new Vue({
                 var originalClass = classArr.filter(v => v.indexOf('slide-') != -1);
                 v.className = originalClass[0];
             });
-            var wrapper = document.querySelector('.wrapper');
-            var wrapperOldClass = wrapper.className;
-            var wrapperNewClass = wrapperOldClass.split(" ");
-            wrapperNewClass.push('sliding');
-            wrapperNewClass = wrapperNewClass.join(" ");
-            wrapper.className = wrapperNewClass;
-            setTimeout(async function () {
-                wrapper.className = wrapperOldClass;
-            }, 700)
 
             // set visual for current slide
             var parent = this.$refs[`${element}`];
