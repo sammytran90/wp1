@@ -1,11 +1,14 @@
 /* responsive */
-@media (max-width: 1800px){
+@media (max-width: 1200px){
     #app,
     .controller,
     .tittles,
     [class^="wrapper__slide-"]{
         min-width: 200vmin;
-    }    
+    }   
+    .wrapper{
+        min-width: 800vmin;
+    } 
 }
 @media (max-width: 1100px){
     .deco-swing::before{
