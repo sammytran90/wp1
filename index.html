@@ -166,12 +166,13 @@
             </ul>
             <!-- download content -->
             <div class="download">
-                <a href="http://localhost/downloads/Meetup #2.pdf" @click.stop="">Download the content!!</a>
+                <a href="" @click.prevent="downloadFunction('Meetup2')">Download the content!!</a>
             </div>
         </div>
     </div>
 
     <script src="./libs/vuejs/vue.js"></script>
+    <script src="./libs/axios/axios.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 

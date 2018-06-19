@@ -145,8 +145,8 @@ var app = new Vue({
                         ],
                         content: [
                             [
-                                'Burenrechter - how to get solutions',
-                                'in conflict situations?'
+                                'Burenrechter - how to get solutions in',
+                                'conflict situations?'
                             ]
                         ]
                     },
@@ -287,6 +287,20 @@ var app = new Vue({
                 this.slide++;
                 this.contentAnimation('slide' + this.slide);
             }
+        },
+        downloadFunction: function (file) {
+            axios({
+                url: 'http://insights.wunderpeople.com/downloads/' + file + '.pdf',
+                method: 'GET',
+                responseType: 'blob', // important
+            }).then((response) => {
+                const url = window.URL.createObjectURL(new Blob([response.data]));
+                const link = document.createElement('a');
+                link.href = url;
+                link.setAttribute('download', file + '.pdf');
+                document.body.appendChild(link);
+                link.click();
+            });
         }
     },
     created() {
