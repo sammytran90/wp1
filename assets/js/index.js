@@ -42,25 +42,13 @@ var app = new Vue({
                     },
                     {
                         tittle4: [
-                            [
-                                'Wh',
-                                'y burenrechter?'
-                            ]
+                            'Why burenrechter?'
                         ],
                         content: [
                             [
-                                [
-                                    'Law',
-                                    ' processes'
-                                ],
-                                [
-                                    'fai',
-                                    'l to achieve'
-                                ],
-                                [
-                                    'win',
-                                    '-win solutions'
-                                ]
+                                'Law processes',
+                                'fail to achieve',
+                                'win-win solutions'
                             ]
                         ]
                     },
@@ -157,8 +145,8 @@ var app = new Vue({
                         ],
                         content: [
                             [
-                                'Burenrechter - how to get solutions in',
-                                'conflict situations?'
+                                'Burenrechter - how to get solutions',
+                                'in conflict situations?'
                             ]
                         ]
                     },
@@ -290,24 +278,27 @@ var app = new Vue({
                 a.className += ' visual';
             })
         },
-        testScroll: function (e) {
-            var position = e.deltaY;
-            // console.log(position);
-            if (position > 0 && this.slide < 4) {
-                this.slide++;
-            } else if (position < 0 && this.slide > 1) {
+        keyboardNavigation: function (e) {
+            var keyCode = e.keyCode;
+            if (keyCode == 37 && this.slide > 1) {
                 this.slide--;
+                this.contentAnimation('slide' + this.slide);
+            } else if (keyCode == 39 && this.slide < 4) {
+                this.slide++;
+                this.contentAnimation('slide' + this.slide);
             }
-            this.contentAnimation('slide' + this.slide);
         }
     },
     created() {
-        this.date = this.returnToday();
-        window.addEventListener('scroll', this.testScroll);
     },
     mounted() {
-
+        this.$nextTick(function () {
+            window.addEventListener('keydown', this.keyboardNavigation);
+        })
     },
     ready() {
+    },
+    beforeDestroy() {
+        window.removeEventListener('keydown', this.keyboardNavigation);
     }
 })

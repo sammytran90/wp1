@@ -20,29 +20,16 @@
             <div class="wrapper__slide-1" ref="slide1">
                 <div class="contents">
                     <div class="visual" v-for="(para,index2) in contents.slides[0]" :class="['slide-1_pa-' + index2]">
-                        <template v-if="index2 != 2">
-                            <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
-                            <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
-                            <div v-for="(phase,index3) in para.content" :class="['slide-1_pa-' + index2 + '_p-' + index3]">
-                                <p v-for="words in phase">{{words}}</p>
-                            </div>
-                        </template>
-                        <template v-else-if="index2 == 2">
-                            <!-- <h3 v-for="t3 in para.tittle3">{{t3}}</h3> -->
-                            <h4 v-for="t4 in para.tittle4">                                
-                                <span v-for="letters in t4">{{letters}}</span>
-                            </h4>
-                            <div v-for="(phase,index3) in para.content" :class="['slide-1_pa-' + index2 + '_p-' + index3]">
-                                <p v-for="words in phase">
-                                    <span v-for="letters in words">{{letters}}</span>
-                                </p>
-                            </div>
-                        </template>
+                        <h3 v-for="t3 in para.tittle3">{{t3}}</h3>
+                        <h4 v-for="t4 in para.tittle4">{{t4}}</h4>
+                        <div v-for="(phase,index3) in para.content" :class="['slide-1_pa-' + index2 + '_p-' + index3]">
+                            <p v-for="words in phase">{{words}}</p>
+                        </div>
                     </div>
                 </div>
                 <div class="background">
                     <div class="image-wrapper">
-                        <img src="./assets/image/pics/pic1.png" alt="image here">
+                        <img src="./assets/image/pics/pic1.jpg" alt="image here">
                     </div>
 
                     <div class="decoration decoration_11 blending_color-burn" :class="[hover ? 'deco-sliding' : '']">
@@ -166,7 +153,7 @@
         </div>
 
         <!-- controller -->
-        <div class="layer controller" v-on:wheel="testScroll">
+        <div class="layer controller">
             <ul class="controller__list">
                 <li class="controller__item blending_color-burn" @mouseenter="hover=true" @mouseleave="hover=false" @click="slide=1;contentAnimation('slide1')"
                     :class="slide == 1 ? 'active' : ''">Meetup #2</li>
@@ -177,6 +164,10 @@
                 <li class="controller__item blending_color-burn" @mouseenter="hover=true" @mouseleave="hover=false" @click="slide=4;contentAnimation('slide4')"
                     :class="slide == 4 ? 'active' : ''">Next steps</li>
             </ul>
+            <!-- download content -->
+            <div class="download">
+                <a href="http://localhost/downloads/Meetup #2.pdf" @click.stop="">Download the content!!</a>
+            </div>
         </div>
     </div>
 

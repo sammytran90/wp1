@@ -1,18 +1,18 @@
 /* content slide 1 */
 .slide-1_pa-0{
-    top: 32vmin;
-    left: 19vmin;
+    top: 16vw;
+    left: 9.5vw;
 }
 .slide-1_pa-0_p-0{
-    margin: 1.5vmin 0 0 0;
+    margin: 0.6vw 0 0 0;
 }
 .slide-1_pa-1{
-    top: 25vmin;
-    left: 163vmin;
+    top: 12vw;
+    left: 81vw;
 }
 .slide-1_pa-2{
-    top: 58vmin;
-    left: 151.8vmin;
+    top: 28.7vw;
+    left: 74vw;
 }
 .slide-1_pa-2 h4 > span:first-of-type,
 .slide-1_pa-2 p > span:first-of-type{
@@ -20,24 +20,24 @@
 }
 
 .slide-1_pa-2_p-0{
-    margin: 1.5vmin 0 0 0;
+    margin: .7vw 0 0 0;
 }
 .slide-1_pa-3{
-    top: 8vmin;
-    left: 163vmin;
+    top: 3vw;
+    left: 76vw;
 }
 .slide-1_pa-3 h3{
     position: absolute;
 }
 .slide-1_pa-3 h3:nth-of-type(1){
     transform: rotate(-90deg);
-    top: 1vmin;
-    left: -8vmin;
+    top: 1vw;
+    left: 0vw;
 }
 .slide-1_pa-3 h3:nth-of-type(2){
-    top: -3vmin;
-    left: 2vmin;
+    top: -0.5vw;
+    left: 5vw;
 }
 .slide-1_pa-3_p-0{
-    margin: 5vmin 0 0 3vmin;
+    margin: 3.5vw 0 0 5vw;
 }

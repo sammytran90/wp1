@@ -8,13 +8,13 @@
 
 .image-wrapper{
     position: absolute;
-    width: 107.5vmin;
-    height: 59vmin;
+    width: 52.3vw;
+    height: 29.2vw;
     background: rgba(240,195,15,.5);
     background-blend-mode: multiply;
     display: block;
-    left: 49vmin;
-    top: 24vmin;
+    left: 24vw;
+    top: 11.8vw;
 }
 .image-wrapper img{
     width: 100%;
@@ -31,76 +31,77 @@
     height: 100%;
 }
 .decoration_11{
-    top: 80vmin;
-    left: 176vmin;
-    width: 8.5vmin;
+    top: 39.2vw;
+    left: 85vw;
+    width: 4.2vw;
 }
 .decoration_12{
-    left: -4.5vmin;
-    top: 52.5vmin;
-    width: 15vmin;
+    left: -2.5vw;
+    top: 25.5vw;
+    width: 7.5vw;
 }
 .decoration_13{
-    left: 160.5vmin;
-    top: 20vmin;
-    width: 21vmin;
-    transition: all 2s ease-out;
+    left: 77.5vw;
+    top: 9.7vw;
+    width: 10vw;
+    /* transition: all 2s ease-out; */
 }
 .decoration_13-forward{
-    transform: translateX(11vmin);
+    transform: translateX(11vw);
     transition: all 2s ease-out;
 }
 .decoration_21{
-    top: 63vmin;
-    left: 30vmin;
+    top: 30.5vw;
+    left: 14vw;
     transform: rotate(180deg);
-    width: 13vmin;
+    width: 7vw;
     mix-blend-mode: color-burn;
 }
 .decoration_22{
-    left: 175.5vmin;
-    top: 79.5vmin;
-    width: 8.5vmin;
+    left: 85vw;
+    top: 39.5vw;
+    width: 4vw;
 }
 .decoration_23{
-    left: -39.5vmin;
-    top: 20vmin;
-    width: 21vmin;
+    left: -40.5vw;
+    top: 9.8vw;
+    width: 16vw;
+    height: .8vw;
     transition: all 2s ease-out;
 }
 .decoration_23-forward{
-    transform: translate(29vmin);
+    transform: translate(29vw);
     transition: all 2s ease-out;
 }
 .decoration_31{
-    left: -10vmin;
-    top: 5.5vmin;
-    width: 18vmin;
+    left: -4.5vw;
+    top: 4vw;
+    width: 8vw;
 }
 .decoration_32{
-    left: 37vmin;
-    top: 81.5vmin;
-    width: 13.5vmin;
+    left: 18vw;
+    top: 40.5vw;
+    width: 6.5vw;
 }
 .decoration_33{
-    left: 177.5vmin;
-    top: 42.5vmin;
-    width: 7vmin;
+    left: 86vw;
+    top: 21vw;
+    width: 3.5vw;
 }
 .decoration_41{
-    left: 8vmin;
-    top: 41.5vmin;
-    width: 7.5vmin;
+    left: 3.5vw;
+    top: 20vw;
+    width: 4vw;
 }
 .decoration_42{
-    left: 143vmin;
-    top: -11.5vmin;
-    width: 18.5vmin;
+    left: 69.5vw;
+    top: -5.2vw;
+    width: 8.5vw;
 }
 .decoration_43{
-    left: 170vmin;
-    bottom: 5.5vmin;
-    width: 16vmin;
+    left: 82.5vw;
+    bottom: 2.5vw;
+    width: 8vw;
     transform: rotate(270deg);
     mix-blend-mode: color-burn;
 }

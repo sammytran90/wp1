@@ -4,16 +4,16 @@
     font-family: 'RobotoMono-Medium';
 }
 .controller__list{
-    bottom: 3.5vmin;
-    left: 2.5vmin;
+    top: 34.8vw;
+    left: 1.5vw;
 }
 .controller__item{
     display: table;
     position: relative;
     cursor: pointer;
-    font-size: 4.6rem;
+    font-size: 2.3rem;
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.3;
 }
 .controller__item.active{
     color: rgb(240, 195, 15);
@@ -26,18 +26,18 @@
 /* tittles */
 .tittles__insight{
     color: rgb(210,100,20);
-    font-size: 2.3rem;
-    margin: 2vmin 0 0 3vmin;
+    font-size: 1.1rem;
+    margin: 1vw 0 0 1.5vw;
 }
 .tittles__tittle-wrapper{
-    width: 108vmin;
-    height: 82vmin;
-    left: 48.5vmin;
-    top: 10vmin;
+    width: 52.3vw;
+    height: 40.5vw;
+    left: 24vw;
+    top: 5vw;
 }
 .tittles__decoration{
     box-sizing: border-box;
-    width: 77%;
+    width: 79%;
     height: 100%;
     border: 2vw solid rgba(240,195,15,0.5);
     mix-blend-mode: multiply;
@@ -52,32 +52,32 @@
     color: rgb(16,52,153);
 }
 .tittles__small-tittle{
-    top: 9.5vmin;
-    left: 21.5vmin;
-    width: 20vmin;
+    top: 5vw;
+    left: 10.5vw;
+    width: 9vw;
 }
 .tittles__tittle{
     top: 0;
     left: 0;
-    line-height: 9.5rem;
+    line-height: 4.5rem;
     letter-spacing: .1rem;
     position: absolute;
 }
 .tittles__tittle.deco-swing::before{
-    top: .3vmin;
-    left: -11vmin;
-    width: 12vmin;
-    height: 9.6vmin;
+    top: 0.1vw;
+    left: -5.5vw;
+    width: 6vw;
+    height: 4.6vw;
 }
 .tittles__topic.deco-swing::before{
-    top: 0.9vmin;
-    left: -11.5vmin;
-    width: 12vmin;
-    height: 6vmin;
+    top: 0.4vw;
+    left: -5.7vw;
+    width: 6vw;
+    height: 3vw;
 }
 .tittles__topic{
     position: absolute;
-    letter-spacing: .6rem;
+    letter-spacing: .3rem;
     bottom: 0;
     text-align: right;
     right: 0;
@@ -89,7 +89,7 @@
     display: inline-block;
     position: absolute;
     width: 100%;
-    height: 2vmin;
+    height: 1vw;
     left: 0;
     bottom: 2px;
     background: rgb(240,195,15);
@@ -99,11 +99,33 @@
 .tittles__date{
     transform: rotate(-90deg) translate(100%,0);
     transform-origin: right bottom;
-    bottom: 0;
-    right: 0;
-    font-size: 5rem;
+    top: 46.3vw;
+    right: 3px;
+    font-size: 2.7rem;
     color: rgb(210,100,20);
     mix-blend-mode: darken;
     line-height: 1.1;
 }
-
+.download{
+    top: 47.5vw;
+    left: 1.5vw;
+}
+.download a{
+    text-decoration: none;
+    font-size: .8rem;
+    position: relative;
+    color: #9943e0;
+}
+.download a::before{
+    content: ' ';
+    position: absolute;
+    width: 0px;
+    transition: all .7s ease-in-out;
+    bottom: 0px;
+    height: 2px;
+    background: #9943e0;
+}
+.download a:hover::before{
+    width: 100%;
+    transition: all .7s ease-in-out;
+}

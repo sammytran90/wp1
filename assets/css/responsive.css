@@ -1,18 +1,20 @@
 /* responsive */
-@media (max-width: 1200px){
+/* @media (max-width: 1200px){ */
     #app,
     .controller,
     .tittles,
     [class^="wrapper__slide-"]{
-        min-width: 200vmin;
+        min-height: 49vw;
+        max-height: 60vw;
+        /* max-height: 50vw; */
     }   
-    .wrapper{
-        min-width: 800vmin;
+    /* .wrapper{
+        min-width: 800vw;
     } 
-}
+} */
 @media (max-width: 1100px){
     .deco-swing::before{
-        background: repeating-linear-gradient(90deg, rgb(16,52,153), rgb(16,52,153) .2vmin, #FFF .2vmin,#FFF 2.5vmin);
-        background-size: 2.5vmin 100%;
+        background: repeating-linear-gradient(90deg, rgb(16,52,153), rgb(16,52,153) .2vw, #FFF .2vw,#FFF 1.7vw);
+        background-size: 1.7vw 100%;
     }
 }

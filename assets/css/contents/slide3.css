@@ -1,46 +1,47 @@
 /* content slide 3 */
 [class^="slide-3_pa-"] p{
-    font-size: 2.2rem !important;
+    font-size: 1.15rem !important;
+    line-height: 1.2 !important;
 }
 .slide-3_pa-0{
-    top: 30.5vmin;
-    left: 11vmin;
+    top: 15vw;
+    left: 5.3vw;
 }
 .slide-3_pa-0_p-0{
-    margin: 1vmin 0 0 0vmin;
+    margin: .5vw 0 0 0vw;
 }
 .slide-3_pa-1{
-    top: 43vmin;
-    left: 11vmin;
+    top: 21.2vw;
+    left: 5.2vw;
 }
 .slide-3_pa-1_p-0{
-    margin: 1vmin 0 0 0vmin;
+    margin: .7vw 0 0 0vw;
 }
 .slide-3_pa-2{
-    top: 7vmin;
-    left: 150.5vmin;
+    top: 3.5vw;
+    left: 73.5vw;
 }
 .slide-3_pa-2_p-0{
-    margin: 1vmin 0 0 0vmin;
+    margin: .5vw 0 0 0vw;
 }
 .slide-3_pa-3{
-    top: 19vmin;
-    left: 162vmin;
+    top: 9.5vw;
+    left: 79vw;
 }
 .slide-3_pa-3_p-0{
-    margin: 1vmin 0 0 0vmin;
+    margin: .5vw 0 0 0vw;
 }
 .slide-3_pa-4{
-    top: 59vmin;
-    left: 162.5vmin;
+    top: 29vw;
+    left: 79.2vw;
 }
 .slide-3_pa-4_p-0{
-    margin: 1vmin 0 0 0vmin;
+    margin: .5vw 0 0 0vw;
 }
 .slide-3_pa-5{
-    top: 74vmin;
-    left: 162.5vmin;
+    top: 36.5vw;
+    left: 79vw;
 }
 .slide-3_pa-5_p-0{
-    margin: 1vmin 0 0 0vmin;
+    margin: .5vw 0 0 0vw;
 }
