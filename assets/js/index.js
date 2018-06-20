@@ -13,7 +13,7 @@ var app = new Vue({
                 [
                     {
                         tittle4: [
-                            'Participants'
+                            'Participants: 11'
                         ],
                         content: [
                             [
@@ -145,8 +145,8 @@ var app = new Vue({
                         ],
                         content: [
                             [
-                                'Burenrechter - how to get solutions in',
-                                'conflict situations?'
+                                'Burenrechter - how to get solutions',
+                                'in conflict situations?'
                             ]
                         ]
                     },
@@ -201,18 +201,16 @@ var app = new Vue({
                         ],
                         content: [
                             [
-                                'New insights in',
-                                'how to create',
-                                'more empathy'
+                                'New insights in how to',
+                                'create more empathy'
                             ],
                             [
                                 'Be forgiving',
                                 'during the process'
                             ],
                             [
-                                'Do no start',
-                                'within the',
-                                'legal system'
+                                'Do no start within',
+                                'the legal system'
                             ]
                         ]
                     },
@@ -277,6 +275,14 @@ var app = new Vue({
             allElement.forEach(function (a) {
                 a.className += ' visual';
             })
+            // change tittle if slide 4
+            if(this.slide == 4){
+                this.contents.tittle = 'Coming up...';
+                this.contents.topic = '13 JUNE 2018';
+            }else{
+                this.contents.tittle = 'Meetup #2';
+                this.contents.topic = 'BURENRECHTER';
+            }
         },
         navigateSlide: function () {
             if (this.slide < 4) {

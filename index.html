@@ -133,8 +133,16 @@
         <!-- main-tittles -->
         <div class="layer tittles">
             <!-- slogan -->
-            <div class="tittles__insight">
-                <p>Wunderpeople Insights</p>
+            <div class="logo">
+                <meta name="description-1" content="Wunderpeople logo">
+                <!-- Wunderpeople -->
+                <div class="logo__logo-1">
+                    <img src="./assets/logo/wunderpeople.svg" alt="Wunderpeople">
+                </div>
+                <!-- BORDERSESSIONS -->
+                <div class="logo__logo-2">
+                        <img src="./assets/logo/BORDERSESSIONS.svg" alt="BORDERSESSIONS">
+                    </div>
             </div>
             <!-- topic -->
             <div class="tittles__small-tittle">
@@ -142,7 +150,7 @@
             </div>
             <div class="tittles__tittle-wrapper">
                 <div class="tittles__decoration"></div>
-                <div class="tittles__tittle deco-swing">
+                <div class="tittles__tittle deco-swing" :class="[slide == 4 ? 'tittle-end' : '']">
                     <h1 class="blending_color-burn">{{contents.tittle}}</h1>
                 </div>
                 <div class="tittles__topic deco-swing">
@@ -171,7 +179,10 @@
 
             <!-- download content -->
             <div class="download">
-                <a href="http://insights.wunderpeople.com/downloads/Meetup2.pdf" download>Download the content!!</a>
+                <a class="download__link" href="http://insights.wunderpeople.com/downloads/Meetup2.pdf" download>
+                    <span class="download__icon"></span>
+                    <span>Download Content</span>
+                </a>
             </div>
         </div>
     </div>
