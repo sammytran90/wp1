@@ -278,6 +278,11 @@ var app = new Vue({
                 a.className += ' visual';
             })
         },
+        navigateSlide: function () {
+            if (this.slide < 4) {
+                this.slide++;
+            }
+        },
         keyboardNavigation: function (e) {
             var keyCode = e.keyCode;
             if (keyCode == 37 && this.slide > 1) {
@@ -287,20 +292,6 @@ var app = new Vue({
                 this.slide++;
                 this.contentAnimation('slide' + this.slide);
             }
-        },
-        downloadFunction: function (file) {
-            axios({
-                url: 'http://insights.wunderpeople.com/downloads/' + file + '.pdf',
-                method: 'GET',
-                responseType: 'blob', // important
-            }).then((response) => {
-                const url = window.URL.createObjectURL(new Blob([response.data]));
-                const link = document.createElement('a');
-                link.href = url;
-                link.setAttribute('download', file + '.pdf');
-                document.body.appendChild(link);
-                link.click();
-            });
         }
     },
     created() {

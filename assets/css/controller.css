@@ -22,7 +22,34 @@
 .controller__item.active:after{
     display: none;
 }
-
+.controller__arrow{
+    position: absolute;
+    cursor: pointer;
+}
+.controller__arrow.arrow-1{
+    top: 39vw;
+    left: 85vw;
+    width: 4.5vw;
+    height: 8vw;
+}
+.controller__arrow.arrow-2{
+    top: 39vw;
+    left: 85vw;
+    width: 4.5vw;
+    height: 8vw;
+}
+.controller__arrow.arrow-3{
+    top: 21vw;
+    left: 86vw;
+    width: 3.5vw;
+    height: 6.5vw;
+}
+.controller__arrow.arrow-4{
+    top: 20vw;
+    left: 3.5vw;
+    width: 4.5vw;
+    height: 7.5vw;
+}
 /* tittles */
 .tittles__insight{
     color: rgb(210,100,20);

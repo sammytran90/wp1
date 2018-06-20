@@ -164,15 +164,19 @@
                 <li class="controller__item blending_color-burn" @mouseenter="hover=true" @mouseleave="hover=false" @click="slide=4;contentAnimation('slide4')"
                     :class="slide == 4 ? 'active' : ''">Next steps</li>
             </ul>
+
+            <!-- navigate arrows -->
+            <div class="controller__arrow" @mouseenter="hover=true" @mouseleave="hover=false" @click="navigateSlide();contentAnimation('slide' + slide)"
+                :class="['arrow-' + slide]"></div>
+
             <!-- download content -->
             <div class="download">
-                <a href="" @click.prevent="downloadFunction('Meetup2')">Download the content!!</a>
+                <a href="http://insights.wunderpeople.com/downloads/Meetup2.pdf" download>Download the content!!</a>
             </div>
         </div>
     </div>
 
     <script src="./libs/vuejs/vue.js"></script>
-    <script src="./libs/axios/axios.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 
