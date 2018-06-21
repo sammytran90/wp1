@@ -44,24 +44,46 @@
 
 @keyframes sliding{
     0% {transform: translateX(0)}
-    50% {transform: translateX(4vw)}
+    50% {transform: translateX(2vw)}
     100% {transform: translateX(0)}    
 }
 @-moz-keyframes sliding{
     0% {transform: translateX(0)}
-    50% {transform: translateX(4vw)}
+    50% {transform: translateX(2vw)}
     100% {transform: translateX(0)}    
 }
 @-o-keyframes sliding{
     0% {transform: translateX(0)}
-    50% {transform: translateX(4vw)}
+    50% {transform: translateX(2vw)}
     100% {transform: translateX(0)}    
 }
 @-webkit-keyframes sliding{
     0% {transform: translateX(0)}
-    50% {transform: translateX(4vw)}
+    50% {transform: translateX(2vw)}
     100% {transform: translateX(0)}    
 }
+
+@keyframes sliding-small{
+    0% {transform: translateX(0)}
+    50% {transform: translateX(-1vw)}
+    100% {transform: translateX(0)}    
+}
+@-moz-keyframes sliding-small{
+    0% {transform: translateX(0)}
+    50% {transform: translateX(-1vw)}
+    100% {transform: translateX(0)}    
+}
+@-o-keyframes sliding-small{
+    0% {transform: translateX(0)}
+    50% {transform: translateX(-1vw)}
+    100% {transform: translateX(0)}    
+}
+@-webkit-keyframes sliding-small{
+    0% {transform: translateX(0)}
+    50% {transform: translateX(-1vw)}
+    100% {transform: translateX(0)}    
+}
+
 
 @keyframes accessing{
     from { background-position: 0 0; }

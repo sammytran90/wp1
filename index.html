@@ -174,9 +174,13 @@
             </ul>
 
             <!-- navigate arrows -->
-            <div class="controller__arrow" @mouseenter="hover=true" @mouseleave="hover=false" @click="navigateSlide();contentAnimation('slide' + slide)"
+            <div class="controller__arrow" @mouseenter="hover=true" @mouseleave="hover=false" @click="arrowNavigation()"
                 :class="['arrow-' + slide]"></div>
 
+            <!-- back arrow -->
+            <div class="controller__back-arrow blending_color-burn" :style="[(slide != 1 && slide !=4) ? {visibility: 'visible',opacity: 1} : {visibility: 'hidden',opacity: 0}]" @click="slideBackward();contentAnimation('slide' + slide)">
+                <img class="blending_color-burn" src="./assets/image/deco/deco1.svg" alt="">
+            </div>
             <!-- download content -->
             <div class="download">
                 <a class="download__link" href="http://insights.wunderpeople.com/downloads/Meetup2.pdf" download>

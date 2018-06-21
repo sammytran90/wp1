@@ -265,7 +265,7 @@ var app = new Vue({
                 var classArr = v.className.split(" ");
                 var originalClass = classArr.filter(v => v.indexOf('slide-') != -1);
                 v.className = originalClass[0];
-            });
+            })
 
             // set visual for current slide
             var parent = this.$refs[`${element}`];
@@ -276,18 +276,31 @@ var app = new Vue({
                 a.className += ' visual';
             })
             // change tittle if slide 4
-            if(this.slide == 4){
+            if (this.slide == 4) {
                 this.contents.tittle = 'Coming up...';
                 this.contents.topic = '13 JUNE 2018';
-            }else{
+            } else {
                 this.contents.tittle = 'Meetup #2';
                 this.contents.topic = 'BURENRECHTER';
             }
         },
-        navigateSlide: function () {
+        slideForward: function () {
             if (this.slide < 4) {
                 this.slide++;
             }
+        },
+        slideBackward: function () {
+            if (this.slide > 1) {
+                this.slide--;
+            }
+        },
+        arrowNavigation: function () {
+            if (this.slide == 4) {
+                this.slide = 1;
+            } else {
+                this.slideForward();
+            }
+            this.contentAnimation('slide' + this.slide);
         },
         keyboardNavigation: function (e) {
             var keyCode = e.keyCode;

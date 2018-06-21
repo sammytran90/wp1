@@ -90,7 +90,10 @@
 .decoration_41{
     left: 3.5vw;
     top: 20vw;
-    width: 4vw;
+    width: 4vw;    
+}
+.decoration_41 img{
+    transform: rotate(180deg);
 }
 .decoration_42{
     left: 69.5vw;

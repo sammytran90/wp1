@@ -22,6 +22,7 @@
 .controller__item.active:after{
     display: none;
 }
+/* next button */
 .controller__arrow{
     position: absolute;
     cursor: pointer;
@@ -49,6 +50,21 @@
     left: 3.5vw;
     width: 4.5vw;
     height: 7.5vw;
+}
+/* back button */
+.controller__back-arrow{
+    left: 15vw;
+    top: 48vw;
+    width: 1.5vw;
+    cursor: pointer;
+    transition: all .8s ease-in-out;
+}
+.controller__back-arrow:hover{
+    animation: sliding-small 0.7s infinite ease-in-out;
+}
+.controller__back-arrow img{
+    width: 100%;
+    transform: rotate(180deg);
 }
 /* tittles */
 .logo{
@@ -149,8 +165,10 @@
     line-height: 1.1;
 }
 .download{
-    top: 25.1vw;
-    left: 10.5vw;
+    top: 47vw;
+    left: 1vw;
+    /* border: 2px solid rgb(210,100,20); */
+    /* border-image: repeating-linear-gradient(45deg, rgb(210,100,20), rgb(210,100,20) .5vw, rgba(0, 0, 0, 0) .5vw, rgba(0, 0, 0, 0) 1vw ) 1; */
 }
 .download__link{
     text-decoration: none;
