@@ -165,11 +165,28 @@
     line-height: 1.1;
 }
 .download{
+    position: relative;
     top: 47vw;
     left: 1vw;
+    display: inline-block;
     /* border: 2px solid rgb(210,100,20); */
     /* border-image: repeating-linear-gradient(45deg, rgb(210,100,20), rgb(210,100,20) .5vw, rgba(0, 0, 0, 0) .5vw, rgba(0, 0, 0, 0) 1vw ) 1; */
 }
+.download::before{
+    content: '';
+    width: 0;
+    transition: all .3s ease-in-out;
+    position: absolute;
+    height: 40%;
+    bottom: 0px;
+    background: rgb(240,195,15);
+    mix-blend-mode: color-burn;
+}
+.download:hover::before{
+    width: 100%;
+    transition: all .3s ease-in-out;
+}
+
 .download__link{
     text-decoration: none;
     font-size: 1.1rem;
